@@ -4,7 +4,12 @@
 			<div class="top"></div>
 			<Searchbar :equipementcategories="equipementcategories" />
 			<ul class="menu__section">
-				<li v-for="(section, key) in sectionList" :key="key" class="menu__item">
+				<li
+					v-for="(section, key) in sectionList"
+					:key="key"
+					class="menu__item"
+					@click="close"
+				>
 					<a
 						class="text menu__link"
 						:href="section.link"
@@ -23,7 +28,7 @@
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fas, faTruckMonster } from "@fortawesome/free-solid-svg-icons";
 import Searchbar from "@components/Searchbar.vue";
 
 library.add(fas);
@@ -53,11 +58,19 @@ export default {
 			menuClass: "menu",
 		};
 	},
-	mounted() {
-		console.log(this.opened);
-		if (this.opened) this.menuClass = "menu";
-		else this.menuClass = "menu menu--shown";
-		console.log(this.menuClass);
+	methods: {
+		close() {
+			this.$emit("close");
+		},
+	},
+	watch: {
+		opened: {
+			immediate: true,
+			handler(opened) {
+				if (opened) this.menuClass = "menu menu--shown";
+				else this.menuClass = "menu";
+			},
+		},
 	},
 };
 </script>

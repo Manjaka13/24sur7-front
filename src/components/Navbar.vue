@@ -39,6 +39,7 @@
 			:opened="menuOpened"
 			:sectionList="sectionList"
 			:equipementcategories="equipementcategories"
+			@close="toggleMenu"
 		/>
 	</div>
 </template>
