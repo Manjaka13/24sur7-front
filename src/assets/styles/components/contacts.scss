@@ -1,0 +1,46 @@
+.contacts {
+	background: $color-fg-alt;
+	display: flex;
+	justify-content: center;
+
+	&__box {
+		padding: 40px 0 40px 0;
+	}
+
+	.title {
+		padding-bottom: 20px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		padding: 10px 0 10px 0;
+	}
+
+	.phone {
+		color: $color-bg;
+		font-size: 24pt;
+	}
+
+	.social__link {
+		color: $color-fg-alt;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $color-fg;
+		margin-right: 20px;
+		border-radius: 50%;
+		&:hover {
+			font-size: 19pt;
+			color: $color-bg;
+		}
+		&:active {
+			font-size: 6pt;
+		}
+	}
+}

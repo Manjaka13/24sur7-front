@@ -1,0 +1,10 @@
+/node_modules
+.env
+.env.development
+.env.production
+/dist/*.js
+/dist/*.txt
+/dist/*.map
+/dist/*.png
+/dist/*.jpg
+yarn-error.log

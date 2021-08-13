@@ -1,0 +1,81 @@
+/*
+	Import external base 
+*/
+
+@import "./vars.scss";
+@import "./fonts.scss";
+@import "./screen.scss";
+@import "./class.scss";
+
+/*
+	Global styling
+*/
+
+html,
+body,
+#app {
+	width: 100%;
+	height: auto;
+	background: $color-1;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $font-regular;
+	font-size: $font-size-normal;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+form,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+}
+
+button,
+a {
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+a {
+	text-decoration: none;
+}
+
+button,
+input,
+select {
+	border: none;
+	outline: none;
+}
+
+/* 
+p,
+a,
+button,
+li {
+	color: $color-3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: $color-4;
+}
+ */

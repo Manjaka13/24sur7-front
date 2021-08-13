@@ -1,0 +1,53 @@
+.newsletter {
+	background: $color-fg-alt;
+	display: flex;
+	justify-content: center;
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 0 40px 0;
+		@include screen-md {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			box-shadow: 0px 0px 5px lime inset;
+		}
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0px 0px 1px black;
+		@include screen-md {
+			margin-top: 20px;
+		}
+	}
+
+	.input {
+		background: $color-fg-alt;
+		color: $color-fg;
+		@include screen-xsm {
+			width: 100%;
+		}
+	}
+
+	.button {
+		color: $color-fg;
+	}
+
+	.text {
+		max-width: 600px;
+		padding-right: 20px;
+		text-align: justify;
+		@include screen-md {
+			max-width: 100%;
+		}
+	}
+}

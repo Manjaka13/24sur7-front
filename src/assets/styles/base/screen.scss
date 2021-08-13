@@ -1,0 +1,27 @@
+/*
+    Responsive mixins
+*/
+
+@mixin screen-xsm {
+	@media (max-width: $xsm) {
+		@content;
+	}
+}
+
+@mixin screen-sm {
+	@media (max-width: $sm) {
+		@content;
+	}
+}
+
+@mixin screen-md {
+	@media (max-width: $md) {
+		@content;
+	}
+}
+
+@mixin screen-lg {
+	@media (max-width: $lg) {
+		@content;
+	}
+}

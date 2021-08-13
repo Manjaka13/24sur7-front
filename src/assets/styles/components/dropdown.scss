@@ -1,0 +1,39 @@
+.dropdown {
+	position: absolute;
+	top: 100%;
+	flex-direction: column;
+	background: $color-fg-alt;
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 1px black;
+	pointer-events: auto;
+	overflow: hidden;
+
+	&--hidden {
+		display: none;
+	}
+
+	&__right {
+		opacity: 0;
+	}
+
+	&__item {
+		padding: 7px 20px 7px 20px;
+		color: $color-fg;
+		background: $color-fg-alt;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&:hover {
+			background: darken($color-fg-alt, 5%);
+			.dropdown__right {
+				opacity: 1;
+			}
+		}
+	}
+
+	.icon {
+		width: 20px;
+	}
+}
