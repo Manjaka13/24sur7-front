@@ -1,8 +1,8 @@
 import "@styles/index.scss";
-// import Homepage from "@routes/Homepage.js";
 
 const features = {
 	HomePage: ["HomePage"],
+	Devis: ["Devis"],
 };
 
 const { id } = document.body;

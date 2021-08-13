@@ -1,0 +1,8 @@
+{
+    "data":[
+        { "name": "Facebook", "icon": "facebook" },
+		{ "name": "Twitter", "icon": "twitter" },
+		{ "name": "Instagram", "icon": "instagram" },
+		{ "name": "LinkedIn", "icon": "linkedin" }
+    ]
+}

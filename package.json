@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"start": "npx webpack serve --config webpack.config.js --mode development --env development",
+		"local": "npx webpack serve --config webpack.config.js --env local",
 		"build": "npx webpack --config webpack.config.js --mode production --env production"
 	},
 	"author": "Manjaka13",

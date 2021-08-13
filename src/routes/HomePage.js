@@ -1,12 +1,7 @@
 import Vue from "vue/dist/vue";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import HomePage from "@components/HomePage.vue";
 import { getContacts } from "@controller/contacts.js";
 import { getEquipement } from "@controller/equipement.js";
-
-library.add(fas, fab);
 
 Vue.config.productionTip = false;
 

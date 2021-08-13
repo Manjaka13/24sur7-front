@@ -4,7 +4,9 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const STATIC_FOLDER = "public";
 
 module.exports = (env) => {
-	const envPath = "./.env." + (env.development ? "development" : "production");
+	const envPath =
+		"./.env." +
+		(env.development ? "development" : env.local ? "local" : "production");
 	console.log("Environment variable: " + envPath);
 	return {
 		mode: "development",
