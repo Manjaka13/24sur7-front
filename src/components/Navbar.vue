@@ -10,7 +10,7 @@
 						24<span class="title-picked">sur</span>7
 					</h1>
 				</div>
-				<Searchbar />
+				<Searchbar :equipementcategories="equipementcategories" />
 				<button class="trigger-button" @click="toggleMenu">
 					<Icon class="icon" icon="bars" />
 				</button>
@@ -35,7 +35,11 @@
 				</ul>
 			</div>
 		</div>
-		<Menu :opened="menuOpened" :sectionList="sectionList" />
+		<Menu
+			:opened="menuOpened"
+			:sectionList="sectionList"
+			:equipementcategories="equipementcategories"
+		/>
 	</div>
 </template>
 
@@ -55,6 +59,12 @@ export default {
 		Searchbar,
 		Menu,
 	},
+	props: {
+		equipementcategories: {
+			type: Array,
+			default: () => [],
+		},
+	},
 	data() {
 		return {
 			sectionList: [
@@ -71,22 +81,16 @@ export default {
 					description: "Demander un devis payant.",
 				},
 				{
-					name: "Prix",
-					icon: "pencil-ruler",
+					name: "Abonnement",
+					icon: "wallet",
 					link: "#0",
-					description: "Demander un devis payant.",
+					description: "Nos prix.",
 				},
 				{
 					name: "Devises",
 					icon: "euro-sign",
 					link: "#0",
 					description: "Cours des devises en temps réel.",
-				},
-				{
-					name: "Abonnement",
-					icon: "wallet",
-					link: "#0",
-					description: "Nos prix.",
 				},
 				{
 					name: "Réussites",

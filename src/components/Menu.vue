@@ -2,7 +2,7 @@
 	<div :class="menuClass">
 		<div class="container">
 			<div class="top"></div>
-			<Searchbar />
+			<Searchbar :equipementcategories="equipementcategories" />
 			<ul class="menu__section">
 				<li v-for="(section, key) in sectionList" :key="key" class="menu__item">
 					<a
@@ -40,6 +40,10 @@ export default {
 			default: false,
 		},
 		sectionList: {
+			type: Array,
+			default: () => [],
+		},
+		equipementcategories: {
 			type: Array,
 			default: () => [],
 		},

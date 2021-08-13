@@ -34,7 +34,11 @@
 
 	<body id="HomePage">
 		<div id="app" class="app">
-			<home-page :contactslist="contacts.list" :sociallist="contacts.social" />
+			<home-page
+				:contactslist="contacts.list"
+				:sociallist="contacts.social"
+				:equipementcategories="equipement.categories"
+			/>
 		</div>
 		<script src="./bundle.js"></script>
 	</body>

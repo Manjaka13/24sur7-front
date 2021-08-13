@@ -1,11 +1,15 @@
 <template>
 	<form class="searchbar">
 		<select
-			v-if="categoryList && categoryList.length > 0"
+			v-if="equipementcategories && equipementcategories.length > 0"
 			class="input category-list"
 			v-model="currentCategory"
 		>
-			<option v-for="(category, key) in categoryList" :key="key" :value="category">
+			<option
+				v-for="(category, key) in equipementcategories"
+				:key="key"
+				:value="category"
+			>
 				{{ category }}
 			</option>
 		</select>
@@ -45,6 +49,12 @@ export default {
 		Icon: FontAwesomeIcon,
 		Dropdown,
 	},
+	props: {
+		equipementcategories: {
+			type: Array,
+			default: () => [],
+		},
+	},
 	data() {
 		return {
 			searchList: ["iPhone 5", "iPhone 6", "iPad 3", "Boose QC135"],
@@ -52,13 +62,6 @@ export default {
 			searchPrices: ["210.99 €", "265.99 €", "143.99 €", "129.99 €"],
 			searchMax: 3,
 			currentCategory: "Tout",
-			categoryList: [
-				"Tout",
-				"Electronique & Utilitaire",
-				"Décoration",
-				"Intérieur",
-				"Jouet & Loisir",
-			],
 			searchText: "",
 		};
 	},

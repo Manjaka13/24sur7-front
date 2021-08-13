@@ -1,6 +1,6 @@
 <template>
 	<div class="home-page">
-		<Navbar />
+		<Navbar :equipementcategories="equipementcategories" />
 		<Newsletter />
 		<Contacts :contactslist="contactslist" :sociallist="sociallist" />
 		<Copyright />
@@ -27,6 +27,10 @@ export default {
 			default: () => {},
 		},
 		sociallist: {
+			type: Array,
+			default: () => [],
+		},
+		equipementcategories: {
 			type: Array,
 			default: () => [],
 		},

@@ -93,15 +93,20 @@
 			background: $color-fg;
 			color: $color-bg;
 		}
+		@media only screen and(max-width: 1200px) {
+			margin-right: 5px;
+		}
 	}
 
 	.vertical-separator {
 		width: 8px;
 		height: 8px;
 		background: $color-fg;
-		margin-left: 10px;
-		margin-right: 10px;
+		margin: 0 10px 0 10px;
 		border-radius: 50%;
+		@media only screen and(max-width: 1200px) {
+			display: none;
+		}
 	}
 
 	.trigger-button {

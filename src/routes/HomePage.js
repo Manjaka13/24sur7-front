@@ -4,6 +4,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import HomePage from "@components/HomePage.vue";
 import { getContacts } from "@controller/contacts.js";
+import { getEquipement } from "@controller/equipement.js";
 
 library.add(fas, fab);
 
@@ -23,6 +24,9 @@ export default {
 					list: {},
 					social: [],
 				},
+				equipement: {
+					categories: [],
+				},
 			},
 			created() {
 				this.handleScroll();
@@ -35,6 +39,9 @@ export default {
 				this.getContacts("social").then((data) => {
 					this.contacts.social = data;
 				});
+				this.getEquipement("categories").then((data) => {
+					this.equipement.categories = data;
+				});
 			},
 			destroyed() {
 				window.removeEventListener("scroll", this.handleScroll);
@@ -45,6 +52,11 @@ export default {
 				},
 				getContacts(type) {
 					return getContacts()(type)
+						.then(({ data }) => data)
+						.catch((e) => console.error(e));
+				},
+				getEquipement(type) {
+					return getEquipement()(type)
 						.then(({ data }) => data)
 						.catch((e) => console.error(e));
 				},
