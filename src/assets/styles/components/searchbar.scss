@@ -3,12 +3,19 @@
 	align-items: center;
 	box-shadow: 0px 0px 1px black;
 	height: 41px;
+	@include screen-md {
+		display: none;
+	}
 
 	.category-list {
 		color: $color-fg;
 		background: $color-fg-alt;
 		text-align: center;
 		border-right: 1px $color-5 solid;
+		@media only screen and (max-width: 1200px) {
+			text-overflow: ellipsis;
+			width: 150px;
+		}
 	}
 
 	.search-block {
@@ -30,6 +37,12 @@
 		}
 	}
 
+	.search-text {
+		@media only screen and (max-width: 1200px) {
+			display: none;
+		}
+	}
+
 	.button {
 		padding: 0 20px 0 20px;
 		height: 100%;
@@ -45,5 +58,8 @@
 
 	.icon {
 		margin-right: 10px;
+		@media only screen and (max-width: 1200px) {
+			margin: 0;
+		}
 	}
 }

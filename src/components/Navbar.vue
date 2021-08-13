@@ -11,6 +11,7 @@
 					</h1>
 				</div>
 				<Searchbar />
+				<button class="trigger-button"><Icon class="icon" icon="bars" /></button>
 			</div>
 			<div class="separator"></div>
 			<div class="navbar__bottom">

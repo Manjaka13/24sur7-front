@@ -19,7 +19,7 @@
 			/>
 			<button class="button" type="submit">
 				<Icon class="icon" icon="search" />
-				Rechercher
+				<span class="search-text">Rechercher</span>
 			</button>
 			<Dropdown
 				:list="searchList"

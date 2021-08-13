@@ -7,6 +7,9 @@ $navbar-height: 140px;
 	display: flex;
 	justify-content: center;
 	position: sticky;
+	@include screen-md {
+		height: auto;
+	}
 
 	.container {
 		height: 100%;
@@ -23,6 +26,9 @@ $navbar-height: 140px;
 	&__left {
 		display: flex;
 		align-items: center;
+		@include screen-md {
+			padding: 10px 0 10px 0;
+		}
 	}
 
 	.logo {
@@ -48,6 +54,9 @@ $navbar-height: 140px;
 
 	.separator {
 		background: rgb(71, 71, 71, 0.4);
+		@include screen-md {
+			display: none;
+		}
 	}
 
 	&__bottom {
@@ -56,6 +65,9 @@ $navbar-height: 140px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include screen-md {
+			display: none;
+		}
 	}
 
 	//border-right: 2px $color-fg-alt solid;
@@ -83,5 +95,24 @@ $navbar-height: 140px;
 		margin-left: 10px;
 		margin-right: 10px;
 		border-radius: 50%;
+	}
+
+	.trigger-button {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: $color-fg;
+		color: $color-fg-alt;
+		font-size: 20pt;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			color: $color-bg;
+			font-size: 24pt;
+		}
+		&:active {
+			font-size: 10pt;
+		}
 	}
 }
