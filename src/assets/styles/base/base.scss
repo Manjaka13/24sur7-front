@@ -25,6 +25,10 @@ body,
 	align-items: center;
 	font-family: $font-regular;
 	font-size: $font-size-normal;
+	padding-top: 140px;
+	@include screen-md {
+		padding-top: 70px;
+	}
 }
 
 html,

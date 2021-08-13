@@ -11,7 +11,9 @@
 					</h1>
 				</div>
 				<Searchbar />
-				<button class="trigger-button"><Icon class="icon" icon="bars" /></button>
+				<button class="trigger-button" @click="toggleMenu">
+					<Icon class="icon" icon="bars" />
+				</button>
 			</div>
 			<div class="separator"></div>
 			<div class="navbar__bottom">
@@ -33,6 +35,7 @@
 				</ul>
 			</div>
 		</div>
+		<Menu :opened="menuOpened" />
 	</div>
 </template>
 
@@ -41,6 +44,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import Searchbar from "./Searchbar.vue";
+import Menu from "./Menu.vue";
 
 library.add(fas);
 
@@ -48,7 +52,8 @@ export default {
 	name: "Navbar",
 	components: {
 		Icon: FontAwesomeIcon,
-		Searchbar: Searchbar,
+		Searchbar,
+		Menu,
 	},
 	data() {
 		return {
@@ -90,7 +95,13 @@ export default {
 					description: "Nos meilleures réussites !",
 				},
 			],
+			menuOpened: false,
 		};
+	},
+	methods: {
+		toggleMenu() {
+			this.menuOpened = !this.menuOpened;
+		},
 	},
 };
 </script>
