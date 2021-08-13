@@ -35,7 +35,7 @@
 				</ul>
 			</div>
 		</div>
-		<Menu :opened="menuOpened" />
+		<Menu :opened="menuOpened" :sectionList="sectionList" />
 	</div>
 </template>
 

@@ -54,6 +54,7 @@
 		background: $color-fg;
 		&:hover {
 			background: lighten($color-fg, 10%);
+			color: $color-bg;
 		}
 		&:active {
 			background: darken($color-fg, 10%);
