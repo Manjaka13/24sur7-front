@@ -50,6 +50,9 @@
 
 	.title {
 		color: $color-fg-alt;
+		@include screen-sm {
+			font-size: 26pt;
+		}
 	}
 
 	.title-picked {
