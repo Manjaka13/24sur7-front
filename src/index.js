@@ -3,6 +3,7 @@ import "@styles/index.scss";
 const features = {
 	HomePage: ["HomePage"],
 	Devis: ["Devis"],
+	Notfound: ["Notfound"],
 };
 
 const { id } = document.body;

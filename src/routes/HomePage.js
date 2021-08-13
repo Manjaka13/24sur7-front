@@ -11,7 +11,7 @@ export default {
 		new Vue({
 			el: "#app",
 			components: {
-				"home-page": HomePage,
+				homepage: HomePage,
 			},
 			data: {
 				scrollPosition: 0,

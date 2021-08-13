@@ -9,7 +9,7 @@ module.exports = (env) => {
 		(env.development ? "development" : env.local ? "local" : "production");
 	console.log("Environment variable: " + envPath);
 	return {
-		mode: "development",
+		mode: env.development || env.local ? "development" : "production",
 		entry: {
 			app: path.resolve(__dirname, "src/index.js"),
 		},
@@ -22,6 +22,9 @@ module.exports = (env) => {
 			contentBase: path.join(__dirname, STATIC_FOLDER),
 			compress: true,
 			port: 5000,
+			historyApiFallback: {
+				index: "notfound.html",
+			},
 		},
 		plugins: [
 			new VueLoaderPlugin(),
