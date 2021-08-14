@@ -72,13 +72,13 @@ export default {
 				{
 					name: "Accueil",
 					icon: "home",
-					link: "#0",
+					link: "/",
 					description: "Revenir à l'accueil.",
 				},
 				{
 					name: "Devis",
 					icon: "pencil-ruler",
-					link: "#0",
+					link: "/devis.html",
 					description: "Demander un devis payant.",
 				},
 				{

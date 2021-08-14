@@ -6,4 +6,7 @@ export default {
 	equipement: {
 		categories: "7a2104a1-ba83-4c1a-846d-c00f3c9eb4bf",
 	},
+	country: {
+		countryName: "a9f0e475-eb50-4872-9088-2295d1a61095",
+	},
 };

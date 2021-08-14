@@ -1,0 +1,84 @@
+.devis {
+	width: 100%;
+	height: auto;
+
+	&__content {
+		width: 100%;
+		height: calc(100vh - 140px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include screen-md {
+			height: calc(100vh - 70px);
+		}
+	}
+
+	&__box {
+		width: 60%;
+		height: auto;
+		background: $color-fg-alt;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0px 0px 20px rgb(200, 200, 200);
+	}
+
+	&__title {
+		text-align: center;
+		padding: 20px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 40px;
+		.button {
+			background: $color-fg;
+			color: $color-fg-alt;
+			&:hover {
+				background: lighten($color-fg, 10%);
+				color: $color-bg;
+			}
+			&:active {
+				background: darken($color-fg, 10%);
+				box-shadow: 0px 0px 20px $color-fg;
+			}
+		}
+	}
+
+	&__input {
+		display: flex;
+		width: 80%;
+		box-shadow: 0px 0px 1px $color-fg;
+		margin-bottom: 20px;
+		position: relative;
+		.input {
+			width: calc(100% - 240px);
+			color: $color-fg;
+			&:hover,
+			&:active {
+				background: $color-fg-alt;
+			}
+		}
+		.icon {
+			margin-right: 5px;
+		}
+		.label {
+			width: 200px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			background: rgb(240, 240, 240);
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			.text {
+				padding: 0 0 0 20px;
+			}
+		}
+		.unit {
+			position: absolute;
+			top: 8px;
+			right: 50px;
+		}
+	}
+}

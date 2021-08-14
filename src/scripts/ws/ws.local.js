@@ -6,4 +6,7 @@ export default {
 	equipement: {
 		categories: "categories.json",
 	},
+	country: {
+		countryName: "countryList.json",
+	},
 };
