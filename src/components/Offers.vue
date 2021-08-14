@@ -4,10 +4,12 @@
 			<h2 class="title-3 offers__title">Abonnez-vous !</h2>
 			<div class="offers__box">
 				<div class="offers__item">
-					<h3 class="title-5 title">Basic</h3>
-					<div class="price-box">
-						<p class="title-4 bold unit">Ar</p>
-						<h4 class="title-1 bold price">20 000</h4>
+					<div class="top">
+						<h3 class="title-5 title">Basic</h3>
+						<div class="price-box">
+							<p class="title-4 bold unit">Ar</p>
+							<h4 class="title-1 bold price">20 000</h4>
+						</div>
 					</div>
 					<div class="separator"></div>
 					<ul class="advantages">
@@ -23,10 +25,12 @@
 					</ul>
 				</div>
 				<div class="offers__item offers__item--special">
-					<h3 class="title-3 title">Pro</h3>
-					<div class="price-box">
-						<p class="title-4 bold unit">Ar</p>
-						<h4 class="title-1 bold price">40 000</h4>
+					<div class="top">
+						<h3 class="title-3 title">Pro</h3>
+						<div class="price-box">
+							<p class="title-4 bold unit">Ar</p>
+							<h4 class="title-1 bold price">40 000</h4>
+						</div>
 					</div>
 					<img
 						class="offers__badge"
@@ -47,10 +51,12 @@
 					</ul>
 				</div>
 				<div class="offers__item">
-					<h3 class="title-5 title">Premium</h3>
-					<div class="price-box">
-						<p class="title-4 bold unit">Ar</p>
-						<h4 class="title-1 bold price">35 000</h4>
+					<div class="top">
+						<h3 class="title-5 title">Premium</h3>
+						<div class="price-box">
+							<p class="title-4 bold unit">Ar</p>
+							<h4 class="title-1 bold price">35 000</h4>
+						</div>
 					</div>
 					<div class="separator"></div>
 					<ul class="advantages">
