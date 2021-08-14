@@ -4,6 +4,7 @@ const features = {
 	HomePage: ["HomePage"],
 	Devis: ["Devis"],
 	Notfound: ["Notfound"],
+	Login: ["Login"],
 };
 
 const { id } = document.body;
