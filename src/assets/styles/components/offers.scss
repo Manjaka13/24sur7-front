@@ -1,0 +1,117 @@
+.offers {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		text-align: center;
+		padding: 20px 20px 40px 20px;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: auto;
+		padding: 20px 0 20px 0;
+	}
+
+	.separator {
+		width: calc(100% - 40px);
+		margin: 20px 0 20px 0;
+	}
+
+	.price-box {
+		width: calc(100% - 40px);
+		background: transparent;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 10px;
+		padding: 20px 0 20px 0;
+		transition: all 0.2s ease-out;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 400px;
+		height: auto;
+		background: white;
+		margin-right: 40px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 20px rgb(230, 230, 230);
+		position: relative;
+		top: 0;
+		transition: all 0.2s ease-out;
+		cursor: pointer;
+		&:hover {
+			top: -20px;
+			box-shadow: 0px 0px 30px rgb(170, 170, 170);
+			.separator {
+				opacity: 0;
+			}
+			.price-box {
+				background: $color-bg-light;
+				color: $color-fg-alt;
+				text-shadow: 0px 1px 2px black;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&--special {
+			min-height: 500px;
+			background: $color-bg;
+			box-shadow: 0px 0px 1px black;
+			.price-box {
+				background: $color-bg-light;
+			}
+			.separator {
+				background: rgb(150, 150, 150);
+			}
+			.unit,
+			.price {
+				color: $color-fg-alt;
+				text-shadow: 0px 1px 2px black;
+			}
+		}
+	}
+
+	.title {
+		text-align: center;
+		color: $color-fg;
+		padding: 20px;
+	}
+
+	&__badge {
+		width: 150px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(25%, -25%);
+	}
+
+	.advantages {
+		width: calc(100% - 40px);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		&__item {
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+		}
+		&__item--check {
+			.icon {
+				color: green;
+			}
+		}
+		.icon {
+			width: 30px;
+		}
+	}
+}
