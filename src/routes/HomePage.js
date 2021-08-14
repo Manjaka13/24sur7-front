@@ -2,6 +2,7 @@ import Vue from "vue/dist/vue";
 import HomePage from "@components/HomePage.vue";
 import { getContacts } from "@controller/contacts.js";
 import { getEquipement } from "@controller/equipement.js";
+import { getPricing } from "@controller/pricing.js";
 
 Vue.config.productionTip = false;
 
@@ -22,6 +23,7 @@ export default {
 				equipement: {
 					categories: [],
 				},
+				pricing: {},
 			},
 			created() {
 				this.handleScroll();
@@ -36,6 +38,9 @@ export default {
 				});
 				this.getEquipement("categories").then((data) => {
 					this.equipement.categories = data;
+				});
+				this.getPricing("pricing").then((data) => {
+					this.pricing = data;
 				});
 			},
 			destroyed() {
@@ -52,6 +57,11 @@ export default {
 				},
 				getEquipement(type) {
 					return getEquipement()(type)
+						.then(({ data }) => data)
+						.catch((e) => console.error(e));
+				},
+				getPricing(type) {
+					return getPricing()(type)
 						.then(({ data }) => data)
 						.catch((e) => console.error(e));
 				},

@@ -1,7 +1,7 @@
 <template>
 	<div class="home-page">
 		<Navbar :equipementcategories="equipementcategories" />
-		<Offers />
+		<Offers :pricing="pricing" />
 		<Newsletter />
 		<Contacts :contactslist="contactslist" :sociallist="sociallist" />
 		<Copyright />
@@ -36,6 +36,10 @@ export default {
 		equipementcategories: {
 			type: Array,
 			default: () => [],
+		},
+		pricing: {
+			type: Object,
+			default: null,
 		},
 	},
 };

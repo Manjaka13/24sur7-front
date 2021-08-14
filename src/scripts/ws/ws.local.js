@@ -9,4 +9,7 @@ export default {
 	country: {
 		countryName: "countryList.json",
 	},
+	pricing: {
+		pricing: "pricing.json",
+	},
 };
