@@ -10,7 +10,6 @@ export default {
 		countryName: "a9f0e475-eb50-4872-9088-2295d1a61095",
 	},
 	pricing: {
-		//Mock the data in ws.local in here
-		pricing: "a9f0e475-eb50-4872-9088-2295d1a61095",
+		pricing: "4be0dec6-ebd7-49e3-942e-b08713e229bd",
 	},
 };
